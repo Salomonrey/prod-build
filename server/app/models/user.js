@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const crypto = require("crypto");
 const { Schema } = mongoose;
-const conf = require ("../../config/dotenv");
+import { jwt_secret } from "../../config/dotenv";
 var jwt = require("jsonwebtoken");
 
 const UserSchema = new mongoose.Schema({
@@ -25,7 +25,7 @@ UserSchema.statics.generateJwt = function(user) {
       username: user.username,
       exp: parseInt(expiry.getTime() / 1000)
     },
-    conf.jwt_secret
+    jwt_secret
   );
 };
 

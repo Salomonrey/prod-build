@@ -11,7 +11,6 @@ module.exports.getCategories = async function(req, res) {
 };
 
 module.exports.addCategory = async function(req, res) {
-  if(req.user){
   var newTree = await new Category({
     name: req.body.name,
     description: req.body.description
@@ -23,22 +22,18 @@ module.exports.addCategory = async function(req, res) {
     }
     res.json({ success: true, msg: "Successful created new post." });
   });
-  } else {
-    return res.json({
-      success: false,
-      message: "Token is not valid"
-    });
-  }
 };
 
 module.exports.getCategory = async function(req, res) {
+  console.log(req.body.name);
   Category.find({ name: req.body.name }).exec(function(err, post) {
     res.status(200).json(post);
   });
 };
 
 module.exports.updateCategory = function(req, res) {
-  if(req.user){
+  console.log(req.body);
+
   Category.updateOne(
     { _id: mongoose.Types.ObjectId(req.body.id) },
     {
@@ -54,16 +49,9 @@ module.exports.updateCategory = function(req, res) {
     }
     res.status(200).json(post);
   });
-  } else {
-    return res.json({
-      success: false,
-      message: "Token is not valid"
-    });
-  }
 };
 
 module.exports.deleteCategory = function(req, res) {
-  if(req.user){
   Category.deleteOne({ _id: mongoose.Types.ObjectId(req.body.id) }).exec(
     function(err, post) {
       if (err) {
@@ -73,12 +61,6 @@ module.exports.deleteCategory = function(req, res) {
       res.status(200).json(post);
     }
   );
-  } else {
-    return res.json({
-      success: false,
-      message: "Token is not valid"
-    });
-  }
 };
 
 // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDFlY2NjZWNmMzc1ZTA2Nzg4MGRlOTAiLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNTYyOTA0NTU5LCJpYXQiOjE1NjIyOTk3NTl9.T4HRVt41FTp0d2izFjYDli3oIltIwXS2MK7PrkcVROc

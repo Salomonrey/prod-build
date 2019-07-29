@@ -1,7 +1,8 @@
 var mail = require("../mailer");
 
 module.exports.sendMail = async function(req, res) {
-  mail.sendMail().then(result => {
+ 
+  mail.sendMail(req.body.name,req.body.number).then(result => {
     var send = result.smtpTransport.sendMail(result.mailOptions, function(
       error,
       info

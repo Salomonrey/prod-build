@@ -3,7 +3,6 @@ const logger = require("../../config/logger");
 var Category = mongoose.model("Category");
 
 module.exports.addSubcategory = async function(req, res) {
-  if (req.user) {
   Category.updateOne(
     { name: req.body.cat_name },
     {
@@ -24,16 +23,10 @@ module.exports.addSubcategory = async function(req, res) {
       }
     }
   );
-  } else {
-    return res.json({
-      success: false,
-      message: "Token is not valid"
-    });
-  }
 };
 
 module.exports.updateSubcategory = function(req, res) {
-  if(req.user){
+  console.log(req.body);
   Category.updateOne(
     {
       name: req.body.cat_name,
@@ -55,16 +48,10 @@ module.exports.updateSubcategory = function(req, res) {
       }
     }
   );
-  } else {
-    return res.json({
-      success: false,
-      message: "Token is not valid"
-    });
-  }
 };
 
 module.exports.deleteSubcategory = function(req, res) {
-  if(req.user){
+  console.log(req.body);
   Category.updateOne(
     {
       name: req.body.cat_name
@@ -82,12 +69,6 @@ module.exports.deleteSubcategory = function(req, res) {
       }
     }
   );
-  } else {
-    return res.json({
-      success: false,
-      message: "Token is not valid"
-    });
-  }
 };
 
 // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDFlY2NjZWNmMzc1ZTA2Nzg4MGRlOTAiLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNTYyOTA0NTU5LCJpYXQiOjE1NjIyOTk3NTl9.T4HRVt41FTp0d2izFjYDli3oIltIwXS2MK7PrkcVROc
