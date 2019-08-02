@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b9a6c8f1354a965d0314372fabf16915",
+    "revision": "900328538502b7adbefc407f4f39be5e",
     "url": "/index.html"
   },
   {
-    "revision": "96c51dcf96fe0094afde",
-    "url": "/static/css/main.9e786303.chunk.css"
+    "revision": "2858ec181be95733158f",
+    "url": "/static/css/main.27b57de4.chunk.css"
   },
   {
-    "revision": "433d01c0789f082801f5",
-    "url": "/static/js/2.4797361b.chunk.js"
+    "revision": "3080be9c01b1851003a3",
+    "url": "/static/js/2.6ca13e0b.chunk.js"
   },
   {
-    "revision": "96c51dcf96fe0094afde",
-    "url": "/static/js/main.a837157f.chunk.js"
+    "revision": "2858ec181be95733158f",
+    "url": "/static/js/main.05c48953.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -72,12 +72,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Frees1.e0a1ec12.mp4"
   },
   {
-    "revision": "6b0255f18cd9907c72d660d01e72c2e5",
-    "url": "/static/media/Gray2.6b0255f1.png"
+    "revision": "f20f89309b98687c3617d6558b1bb5c6",
+    "url": "/static/media/Gray2.f20f8930.png"
   },
   {
-    "revision": "e5be53f1b8248f98c88e8a25d37a425f",
-    "url": "/static/media/Hole.e5be53f1.png"
+    "revision": "56528918936d72ae4ec6a2a76fcb5e0f",
+    "url": "/static/media/Hole.56528918.png"
   },
   {
     "revision": "68d57c92d74ffb0191e2d86ff426a0a4",

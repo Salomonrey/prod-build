@@ -19,7 +19,7 @@ module.exports.sendMail = async function(name, number) {
 
   let mailOptions = {
     from: '"Салиховский сайт" <salihanski@gmail.com>',
-    to: "georgegreek12331@gmail.com",
+    to: "salixm@mail.ru",
     subject: "Обращение с сайта",
     text: "Это проверочное сообщение",
     html: output
@@ -27,3 +27,5 @@ module.exports.sendMail = async function(name, number) {
 
   return { smtpTransport: smtpTransport, mailOptions: mailOptions };
 };
+
+// armada@free-style.kz
