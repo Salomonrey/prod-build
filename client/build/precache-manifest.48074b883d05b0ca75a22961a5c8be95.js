@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "004f1e7ecfc7cd2813c3df6c34e5f939",
+    "revision": "aec6b9a8d65d16046b9d9039a2947a46",
     "url": "/index.html"
   },
   {
-    "revision": "f642fb1e8be647f58770",
-    "url": "/static/css/main.862b2d15.chunk.css"
+    "revision": "58e8ccf942c2f992c9c3",
+    "url": "/static/css/main.674c55b6.chunk.css"
   },
   {
-    "revision": "2e29e719e843e7542a24",
-    "url": "/static/js/2.189ea444.chunk.js"
+    "revision": "b5d807f7e9527108ff9a",
+    "url": "/static/js/2.7e9214ff.chunk.js"
   },
   {
-    "revision": "f642fb1e8be647f58770",
-    "url": "/static/js/main.87c42dce.chunk.js"
+    "revision": "58e8ccf942c2f992c9c3",
+    "url": "/static/js/main.43195f3c.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -38,6 +38,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "338212afe05b479b2e0dbed171dee5e4",
     "url": "/static/media/Blogimgipad.338212af.png"
+  },
+  {
+    "revision": "22f16521a7d16c7f8342680cf30b46bd",
+    "url": "/static/media/Circe-Bold.22f16521.ttf"
+  },
+  {
+    "revision": "bbdee7fca9c9e11ebbc95325d0c70c5d",
+    "url": "/static/media/Circe-ExtraBold.bbdee7fc.ttf"
+  },
+  {
+    "revision": "9fd3216596f21252abbdbc053769134e",
+    "url": "/static/media/Circe-Light.9fd32165.ttf"
   },
   {
     "revision": "6b28c5938d1e4c3f29ef00f27b021303",
