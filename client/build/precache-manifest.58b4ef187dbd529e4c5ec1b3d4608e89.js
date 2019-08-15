@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "194a884a797802254128470df226fd73",
+    "revision": "cebcbc3d92bd03483674c6b269d853ec",
     "url": "/index.html"
   },
   {
-    "revision": "5d6541b924751c8af273",
-    "url": "/static/css/main.6aa82366.chunk.css"
+    "revision": "45c34c228d57c6d253c7",
+    "url": "/static/css/main.f1378910.chunk.css"
   },
   {
-    "revision": "b4716c3ae0afc539c66a",
-    "url": "/static/js/2.966dcebe.chunk.js"
+    "revision": "94621948a2ce6629071b",
+    "url": "/static/js/2.42ee41ae.chunk.js"
   },
   {
-    "revision": "5d6541b924751c8af273",
-    "url": "/static/js/main.c432a9a4.chunk.js"
+    "revision": "45c34c228d57c6d253c7",
+    "url": "/static/js/main.e63531d9.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -146,6 +146,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "540918c87337d3719a2eaeda1788f39d",
     "url": "/static/media/Vannaua.540918c8.jpg"
+  },
+  {
+    "revision": "a6490c5b8a5b0872e5b33fbb86188d5f",
+    "url": "/static/media/YOU.a6490c5b.png"
   },
   {
     "revision": "04d61084932add1ec9de5a739aa84817",
