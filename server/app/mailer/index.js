@@ -10,7 +10,7 @@ module.exports.sendMail = async function(name, number) {
       secure: false,
       auth: {
         user: "salihanski@gmail.com",
-        pass: "Qwerty12#$"
+        pass: "bcnpvmwfsurckyol"
       }
     });
   } catch (e) {
