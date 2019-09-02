@@ -25,7 +25,7 @@ module.exports.getPosts = async function(req, res) {
   res.status(200).json(post); 
   }); 
   } else { 
-  Post.find({}).exec(function(err, post) { 
+  Post.find({}).sort({date: 'desc'}).exec(function(err, post) { 
   res.status(200).json(post); 
   }); 
   } 
