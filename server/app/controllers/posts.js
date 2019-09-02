@@ -17,10 +17,10 @@ var upload = multer({ storage: storage }).single("file");
 module.exports.getPosts = async function(req, res) { 
   logger.info(req.body); 
   if (req.body.cat_name) { 
-  Post.sort({$natural:-1}).find({ 
+  Post.find({ 
   category: req.body.cat_name, 
   subcategory: req.body.sub_cat_name 
-  }).exec(function(err, post) { 
+  }).sort({$natural:-1}).exec(function(err, post) { 
   res.status(200).json(post); 
   }); 
   } else { 
