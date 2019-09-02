@@ -15,10 +15,9 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage }).single("file");
 
 module.exports.getPosts = async function(req, res) { 
-
   logger.info(req.body); 
   if (req.body.cat_name) { 
-  Post.find({ 
+  Post.sort({$natural:-1}).find({ 
   category: req.body.cat_name, 
   subcategory: req.body.sub_cat_name 
   }).exec(function(err, post) { 
@@ -26,7 +25,7 @@ module.exports.getPosts = async function(req, res) {
   }); 
   } else { 
   Post.find({}).sort({$natural:-1}).exec(function(err, post) { 
- 
+  res.status(200).json(post); 
   }); 
   } 
   };
