@@ -26,7 +26,7 @@ module.exports.getPosts = async function(req, res) {
   }); 
   } else { 
   Post.find({}).sort({$natural:-1}).exec(function(err, post) { 
-  res.status(200).json(post); 
+ 
   }); 
   } 
   };
