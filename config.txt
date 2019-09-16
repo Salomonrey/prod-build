@@ -1,0 +1,24 @@
+ƒл€ запуска сайта нужно:
+1)node.js и npm(желательно новые версии)
+2)база данных mongodb
+3)сервер nginx
+
+„тобы запустить серверную часть сайта необходимо зайти в папку server и прописать команду npm start.
+„тобы запустить клиентскую часть необходимо настроить nginx на прослушку порта 9000, после чего зайти в папку client и прописать команду node app.
+
+ѕример настройки nginx на нашем сервере(заменить доменное им€ и ip-адрес):
+
+server {
+    listen 80;
+    server_name www.salger.ru salger.ru;
+location / {
+        proxy_set_header   X-Forwarded-For $remote_addr;
+        proxy_set_header   Host $http_host;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        proxy_pass         http://5.23.49.245:9000;
+    }
+}
