@@ -1,15 +1,15 @@
+
+var fs = require('fs')
+var https = require('https')
+
 import { port } from "./config/dotenv";
 
 const app = require("./config/express");
 
-app.use(express.static(path.join(__dirname, 'build')));
-
-app.get('/*', function(req, res) {
- // res.setHeader('Content-Type', 'text/event-stream')
- // res.setHeader('Cache-Control', 'no-cache')
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-app.listen(port, () => {
-  console.log(`🚀 Server ready at http://localhost:${port}`);
-});
+https.createServer({
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('server.cert')
+}, app)
+.listen(port, function () {
+  console.log('Example app listening on port 3000! Go to https://localhost:3000/')
+})
