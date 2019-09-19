@@ -21,6 +21,7 @@
     "express": "^4.17.1",
     "express-jwt": "^5.3.1",
     "helmet": "^3.18.0",
+    "https": "^1.0.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.6.3",
     "mongoose-date-format": "^1.2.0",
