@@ -6,11 +6,24 @@ import { port } from "./config/dotenv";
 
 const app = require("./config/express");
 
-https.createServer({
-  key: fs.readFileSync('privkey.pem'),
-  cert: fs.readFileSync('cert.pem'),
-  ca: fs.readFileSync('chain.pem')
-}, app)
-.listen(port, function () {
-  console.log('Example app listening on port 1338! Go to https://localhost:1338/')
-})
+const path = require('path');
+const compression = require("compression");
+const express = require('express');
+var fs = require('fs');
+
+app.use(compression());
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/*', function(req, res) {
+ // res.setHeader('Content-Type', 'text/event-stream')
+ // res.setHeader('Cache-Control', 'no-cache')
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+  
+app.listen(9000, (err) => { 
+if(err){ 
+return console.log(err) 
+} 
+console.log(`🚀 Server ready at http://localhost:9000`); 
+});
