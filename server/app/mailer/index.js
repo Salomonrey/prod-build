@@ -19,7 +19,7 @@ module.exports.sendMail = async function(name, number) {
 
   let mailOptions = {
     from: '"fsstudio.kz',
-    to: "salih@salger.ru",
+    to: "jibek-joly@free-style.kz",
     subject: "Обращение с сайта",
     text: "Это проверочное сообщение",
     html: output

@@ -1,6 +1,7 @@
 var mongoose = require("mongoose");
 var multer = require("multer");
 const logger = require("../../config/logger");
+var fs = require('fs');
 var Post = mongoose.model("Post");
 
 var storage = multer.diskStorage({
@@ -99,6 +100,16 @@ module.exports.upload = function(req, res) {
     } else if (err) {
       logger.error(err);
       return res.status(500).json(err);
+    }
+    var maxsize = 2 * 1024 * 1024;
+    var supportMimeTypes = ['image/jpg', 'image/jpeg', 'image/png'];
+    if (req.file.size > maxsize) {
+         fs.unlinkSync(req.file.path);
+         return res.json({success: false, msg: 'File is so more than 2 Mb'});
+       }
+    if(supportMimeTypes.indexOf(req.file.mimetype) == -1) {
+        fs.unlinkSync(req.file.path);
+         return res.json({success: false, msg: 'Unsupported mimetype'});
     }
     return res.status(200).send(req.file);
   });
